@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
+
+// NOTE: you could create a reusable header component
 class CheckoutHeader extends Component {
   /* Use the navigator which was passed from parrent
    * to .pop() from the top of navigation stack */
@@ -12,7 +14,7 @@ class CheckoutHeader extends Component {
     return (
       <View style={styles.container}>
         <Text>Checkout</Text>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.headerButton}
           onPress={() => this.navigateBack()}
         >
@@ -23,6 +25,7 @@ class CheckoutHeader extends Component {
   }
 }
 
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',

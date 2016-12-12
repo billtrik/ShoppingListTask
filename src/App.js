@@ -5,6 +5,9 @@ import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 import Store from './Store';
 
+// NOTE: You should initialize here store and pass the DummyData
+
+
 /* All the routes defined in Routes component */
 import Routes from './Routes';
 

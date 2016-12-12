@@ -22,6 +22,7 @@ class Checkout extends Component {
   }
 }
 
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     flex: 1,

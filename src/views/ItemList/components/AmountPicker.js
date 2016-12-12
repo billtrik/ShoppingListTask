@@ -12,6 +12,7 @@ import { INITIAL_PICKER_AMOUNT, PICKER_HEIGHT } from 'Constants';
 /* Get the screen width so we could use it while styling */
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
+// NOTE: you could use a separate container file for those
 function mapStateToProps(state) {
   return {
     selectedItem: state.shoppingCart.get('selectedItem'),
@@ -31,7 +32,7 @@ function mapDispatchToProps(dispatch) {
 class AmountPicker extends Component {
   /* Add some animation values that are interpolated.
    * We use this for changing the translation in Y axis of the picker.
-   * Also as we need to add more picker values on the go, we 
+   * Also as we need to add more picker values on the go, we
    * need to map it to the state */
   constructor(props){
     super(props);
@@ -121,7 +122,7 @@ class AmountPicker extends Component {
     return pickerValues;
   }
 
-  /* A little helper, to make the android picker not as ugly 
+  /* A little helper, to make the android picker not as ugly
    * and to provide guidence what to do */
   renderAndroidPickerHelper() {
     if (Platform.OS === 'android') {
@@ -140,7 +141,7 @@ class AmountPicker extends Component {
     return (
       <View>
         {this.renderAndroidPickerHelper()}
-        <Picker 
+        <Picker
           selectedValue={this.props.selectedAmount}
           onValueChange={(amount) => this.selectAmount(amount)}
           enabled={true}
@@ -164,6 +165,7 @@ class AmountPicker extends Component {
   }
 }
 
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',

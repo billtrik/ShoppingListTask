@@ -6,6 +6,7 @@ import _ from 'lodash';
 
 import * as ShoppingCartActions from 'ShoppingCartActions';
 
+// NOTE: you could use a separate container file for those
 function mapStateToProps(state) {
   return {
     selectedItem: state.shoppingCart.get('selectedItem'),
@@ -50,6 +51,7 @@ class ItemRow extends Component {
   }
 }
 
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     flex: 1,

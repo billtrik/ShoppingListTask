@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 
+// NOTE: you could use a separate container file for those
 function mapStateToProps(state) {
   return {
     itemsInCart: state.shoppingCart.get('items'),
@@ -68,6 +69,7 @@ class Receipt extends Component {
   }
 }
 
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     flex: 1,

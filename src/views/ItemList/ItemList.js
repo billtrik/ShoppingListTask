@@ -17,6 +17,10 @@ class ItemList extends Component {
   constructor() {
     super();
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+
+    // NOTES: dummy data should be inserted in the store in store initialization from the App.js
+    //        and the data should arrive to this component as props.
+    //        More testable code and clearer separation of concerns
     this.state = {
       dataSource: ds.cloneWithRows(DUMMY_DATA.ITEMS)
     };
@@ -46,6 +50,8 @@ class ItemList extends Component {
   }
 }
 
+
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     flex: 1

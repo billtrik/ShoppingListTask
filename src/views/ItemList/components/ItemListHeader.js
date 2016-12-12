@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 /* Route map */
 import { VIEWS } from 'Constants';
 
+// NOTE: you could use a separate container file for that
 function mapStateToProps(state) {
   return {
     sum: state.shoppingCart.get('sum'),
@@ -12,6 +13,7 @@ function mapStateToProps(state) {
   }
 }
 
+// NOTE: you could create a reusable header component
 class ItemListHeader extends Component {
   /* Push a new view on to the navigation stack */
   navigateToCheckout() {
@@ -22,7 +24,7 @@ class ItemListHeader extends Component {
     return (
       <View style={styles.container}>
         <Text>{`Total: ${this.props.sum - this.props.discount}`}</Text>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.headerButton}
           onPress={() => this.navigateToCheckout()}
         >
@@ -33,6 +35,7 @@ class ItemListHeader extends Component {
   }
 }
 
+// NOTE: you could extract style to its own file
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
