@@ -33,6 +33,7 @@ Once you've done that, run these in the terminal.
 ```sh
 $ npm install
 $ react-native run-android
+$ adb reverse tcp:8081 tcp:8081
 ```
 Or build an .apk, by running:
 ```sh
